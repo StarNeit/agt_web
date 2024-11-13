@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="fs-2 fw-bold py-5">
+    {{ generateGreetMessage() }}
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <mat-card appearance="outlined">
+        <mat-card-content>
+          <div>Products</div>
+          <div class="fs-1 fw-bold py-3">
+            {{ products }}
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-6">
+      <mat-card appearance="outlined">
+        <mat-card-content>
+          <div>Users</div>
+          <div class="fs-1 fw-bold py-3">
+            {{ users }}
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <h1 class="fw-bold">Angular Application</h1>
+  <div class="flex-grow-1"></div>
+  <a *ngIf="isAuthenticated" routerLink="/product" class="mx-1 fs-6 text-black text-decoration-none">
+    Products
+  </a>
+  <a *ngIf="isAuthenticated" routerLink="/profile" class="mx-1">
+    <button mat-icon-button>
+      <mat-icon>person</mat-icon>
+    </button>
+  </a>
+  <button *ngIf="isAuthenticated" mat-icon-button class="mx-1" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+

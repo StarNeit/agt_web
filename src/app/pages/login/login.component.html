@@ -1,0 +1,44 @@
+<div class="page-container container-fluid">
+  <div class="row h-100">
+    <div class="col-6 animated-background d-flex align-items-center justify-content-center text-white">
+      <div class="heading">Login</div>
+    </div>
+    <div class="col-6">
+      <form
+        class="form-wrapper"
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="test@gmail.com"
+          >
+          <mat-error *ngIf="f['email'].errors && f['email'].errors['required']">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="f['email'].errors && f['email'].errors['email']">
+            Invalid email
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput name="password" type="password" formControlName="password">
+          <mat-error *ngIf="f['password'].errors && f['password'].errors['required']">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+        <button
+          class="submit-button"
+          mat-stroked-button
+          type="submit"
+          [disabled]="!loginForm.valid"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

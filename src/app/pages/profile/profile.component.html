@@ -1,0 +1,22 @@
+<div class="container py-5">
+  <div class="mb-5">
+    <div class="my-2">
+      name: {{ profile.name }}
+    </div>
+    <div class="my-2">
+      email: {{ profile.email }}
+    </div>
+    <div class="my-2">
+      role: {{ profile.role }}
+    </div>
+  </div>
+
+  <div>
+    <div class="fs-3 fw-bold">Activities</div>
+
+    <div *ngFor="let activity of activities" class="my-2 d-flex gap-4">
+      <span>{{ activity.time | date: 'MMM DD, YYYY hh:mm' }}</span>
+      <span>{{ activity.content }}</span>
+    </div>
+  </div>
+</div>
